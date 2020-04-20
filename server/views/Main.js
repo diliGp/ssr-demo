@@ -51,13 +51,14 @@ const renderer = (content, helmet, preloadedState) => (`
             ${helmet.meta.toString()}
             ${helmet.title.toString()}
             ${helmet.link.toString()}
+            <link rel="stylesheet" href="main.css" type="text/css"></link>
         </head>
         <body ${helmet.bodyAttributes.toString()}>
             <div id="root">${content}</div>
             <script>
                 window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
             </script>
-            <script src="client_bundle.js"></script>
+            <script src="client_bundle.js" type="text/javascript"></script>
         </body>
     </html>
 `);

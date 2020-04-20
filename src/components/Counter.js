@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import { connect } from 'react-redux';
 import { increment, decrement } from '../store/actions/counter';
 import RenderCount from './RenderCount';
+import './style.css';
 
 const Counter = (props) => {
     const { increment, decrement } = props;
